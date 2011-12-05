@@ -1,6 +1,7 @@
 enable_testing()
 add_subdirectory(thread/test0)
 add_subdirectory(thread/test1)
+add_subdirectory(thread/test2)
 add_subdirectory(stash/echo)
 add_subdirectory(stash/simple_server)
 add_subdirectory(stash/multithread_server)
