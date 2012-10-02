@@ -57,7 +57,7 @@ size_t  UnixSocketStream<Protocol, Dispatcher>::receive_until(moost::streambuf &
 
 template <typename Protocol, typename Dispatcher>
 template <typename ReceiveHandlerUntil>
-void  UnixSocketStream<Protocol, Dispatcher>::async_receive_until(moost::streambuf &sb, std::string const &stop, ReceiveHandlerUntil cb)
+void  UnixSocketStream<Protocol, Dispatcher>::async_receive_until(moost::streambuf &, std::string const &stop, ReceiveHandlerUntil cb)
 {
   Error err;
 

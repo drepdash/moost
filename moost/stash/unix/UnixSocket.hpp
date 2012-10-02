@@ -5,6 +5,7 @@
 #include "moost/stash/unix/utils.hpp"
 #else
 #include <sys/socket.h>
+#include <unistd.h>
 #include <fcntl.h>
 #endif
 
@@ -63,7 +64,6 @@ void UnixSocket<Protocol, Dispatcher>::get_option(UnixSocketBase::NonBlocking &o
   if (!err)
   {
     int ret;
-    int b;
 
     ret = fcntl(_fd, F_GETFL, 0);
     if (ret == -1)

@@ -92,7 +92,6 @@ void UnixSocketAcceptor<Protocol, Dispatcher>::get_option(UnixSocketBase::NonBlo
   if (!err)
   {
     int ret;
-    int b;
 
     ret = fcntl(_fd, F_GETFL, 0);
     if (ret == -1)

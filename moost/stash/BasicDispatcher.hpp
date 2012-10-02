@@ -115,13 +115,13 @@ class BasicDispatcher
   inline int register_event(EventType ev, Argument const &arg,
                             SPIOperation const &op, Error &err)
   {
-    return _implem.register_event<EventType, Argument>(ev, arg, op, err);
+    return _implem.template register_event<EventType, Argument>(ev, arg, op, err);
   }
 
   template <typename EventType>
   inline void cancel_event(EventType ev, int id, Error &err)
   {
-    return _implem.cancel_event<EventType>(ev, id, err);
+    return _implem.template cancel_event<EventType>(ev, id, err);
   }
 
   inline void run(Error &err, bool run = false)

@@ -22,7 +22,7 @@ class UnixResolver
   UnixResolver(Dispatcher &disp) : _dispatcher(disp) {}
   ~UnixResolver() {};
 
-  iterator resolve(UnixQuery<Protocol> &q, Error &err)
+  iterator resolve(UnixQuery<Protocol> &, Error &)
   {
   }
 
